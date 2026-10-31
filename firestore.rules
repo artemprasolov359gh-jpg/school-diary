@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  match /lessons/{id} {
+   allow read: if true;
+   allow create, update: if request.auth != null
+     && request.auth.uid == "NxBrz40yuBfp1LGWNX9QvVzLYbu2"
+     && request.resource.data.keys().hasOnly(["date","subject","start","end","homework","createdAt"])
+     && request.resource.data.date is string
+     && request.resource.data.subject is string
+     && request.resource.data.start is string
+     && request.resource.data.end is string
+     && request.resource.data.homework is string;
+   allow delete: if request.auth != null && request.auth.uid == "PASTE_ADMIN_UID_HERE";
+  }
+ }
+}
