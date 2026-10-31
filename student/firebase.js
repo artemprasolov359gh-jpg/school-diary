@@ -2,12 +2,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/fireba
 import { getFirestore, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCCkpDy-1GI-pNzlg5qp3ZnrylnAwV7Pt8",
+  authDomain: "school75-674b1.firebaseapp.com",
+  projectId: "school75-674b1",
+  storageBucket: "school75-674b1.firebasestorage.app",
+  messagingSenderId: "707344234052",
+  appId: "1:707344234052:web:6b1ca26babc5918c462e11"
 };
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
